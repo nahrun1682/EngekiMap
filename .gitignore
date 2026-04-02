@@ -205,3 +205,30 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Agents / local tools
+# Ignore everything under these dirs by default, then re-include shared assets.
+.claude/*
+.codex/*
+
+# Track shared Claude assets
+!.claude/agents/
+!.claude/agents/**
+!.claude/commands/
+!.claude/commands/**
+!.claude/skills/
+!.claude/skills/**
+!.claude/settings.json
+
+# Track shared Codex assets
+!.codex/skills/
+!.codex/skills/**
+
+# Keep local/private machine-specific files ignored
+.claude/settings.local.json
+.mcp.json
+.playwright-mcp
+
+# Windows ADS metadata files
+*.Zone.Identifier
+*:Zone.Identifier
